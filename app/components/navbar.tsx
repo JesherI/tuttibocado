@@ -1,18 +1,12 @@
 'use client';
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import { Transition } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const pathname = usePathname();
-
-    const isOnMenuPage = pathname === "/menu";
-    const buttonText = isOnMenuPage ? "Home" : "Menu";
-    const buttonHref = isOnMenuPage ? "/" : "/menu";
 
     return (
         <nav className="bg-[#024959]">
@@ -32,10 +26,16 @@ const Navbar = () => {
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                             <Link
-                                href={buttonHref}
+                                href="/"
                                 className="text-white hover:bg-[#03677a] px-3 py-2 rounded-md text-sm font-medium"
                             >
-                                {buttonText}
+                                Home
+                            </Link>
+                            <Link
+                                href="/menu"
+                                className="text-white hover:bg-[#03677a] px-3 py-2 rounded-md text-sm font-medium"
+                            >
+                                Menu
                             </Link>
                             <Link
                                 href="/promos"
@@ -81,10 +81,16 @@ const Navbar = () => {
                 <div className="md:hidden" id="mobile-menu">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <Link
-                            href={buttonHref}
+                            href="/"
                             className="text-white hover:bg-[#03677a] block px-3 py-2 rounded-md text-base font-medium"
                         >
-                            {buttonText}
+                            Home
+                        </Link>
+                        <Link
+                            href="/menu"
+                            className="text-white hover:bg-[#03677a] block px-3 py-2 rounded-md text-base font-medium"
+                        >
+                            Menu
                         </Link>
                         <Link
                             href="/promos"
