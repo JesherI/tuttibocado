@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import ContactWidget from "../components/contactwidget";
 
-// Imágenes locales en la carpeta public
 const images = [
     '/Promos/promo (1).jpg',
     '/Promos/promo (1).jpeg',
@@ -24,6 +24,7 @@ const PhotosPage = () => {
     return (
         <>
             <Navbar />
+            <ContactWidget />
             <div className="bg-gray-100 py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

@@ -2,9 +2,8 @@ const Contact = () => {
     return (
         <section className="bg-[#03677a] text-white py-16 px-4 md:px-12">
             <h2 className="text-4xl font-bold text-center mb-12">Contáctanos</h2>
-
+            
             <div className="flex flex-col md:flex-row items-center gap-8">
-                {/* Mapa responsivo */}
                 <div className="w-full md:w-1/2">
                     <div className="relative w-full pb-[56.25%] h-0 rounded-xl overflow-hidden">
                         <iframe
@@ -17,7 +16,6 @@ const Contact = () => {
                     </div>
                 </div>
 
-                {/* Información de contacto */}
                 <div className="w-full md:w-1/2 space-y-6">
                     <p className="text-lg">
                         Aquí tienes nuestros números de contacto en diferentes localidades:

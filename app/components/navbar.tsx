@@ -43,6 +43,13 @@ const Navbar = () => {
                             >
                                 Promos
                             </Link>
+                            
+                            <Link
+                                href="/login"
+                                className="text-white hover:bg-[#03677a] px-3 py-2 rounded-md text-sm font-medium"
+                            >
+                                Login
+                            </Link>
                         </div>
                     </div>
 
@@ -97,6 +104,12 @@ const Navbar = () => {
                             className="text-white hover:bg-[#03677a] block px-3 py-2 rounded-md text-base font-medium"
                         >
                             Promos
+                        </Link>
+                        <Link
+                            href="/login"
+                            className="text-white hover:bg-[#03677a] block px-3 py-2 rounded-md text-base font-medium"
+                        >
+                            Login
                         </Link>
                     </div>
                 </div>
