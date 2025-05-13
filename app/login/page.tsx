@@ -11,7 +11,7 @@ const LoginPage = () => {
     useEffect(() => {
         const usuarioGuardado = localStorage.getItem('usuario');
         if (usuarioGuardado) {
-            router.push('/reservaciones'); // redirige si ya hay un usuario
+            router.push('/reservaciones');
         }
     }, [router]);
 
@@ -19,7 +19,7 @@ const LoginPage = () => {
         e.preventDefault();
         const userData = { email, nombre };
         localStorage.setItem('usuario', JSON.stringify(userData));
-        router.push('/reservaciones'); // redirigir a reservaciones después del login
+        router.push('/reservaciones');
     };
 
     return (
@@ -62,6 +62,14 @@ const LoginPage = () => {
                         Ingresar
                     </button>
                 </form>
+
+                {/* Aviso de privacidad */}
+                <p className="mt-6 text-xs text-gray-600 text-center">
+                    Al ingresar, aceptas nuestra{' '}
+                    <a href="/aviso-privacidad" className="underline text-[#03677a] hover:text-[#024959]">
+                        política de privacidad
+                    </a>.
+                </p>
             </div>
         </div>
     );
